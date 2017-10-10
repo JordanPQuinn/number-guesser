@@ -11,6 +11,8 @@ var userMessage = document.getElementById('userMessage') ;
 var minNumber = document.getElementById('minRange') ;
 var maxNumber = document.getElementById('maxRange') ; 
 var submitRange = document.getElementById('rangeButton') ;
+var score = 10;
+var totalScore = 0;
 
 clear.disabled = true ;
 reset.disabled = true ;
@@ -71,7 +73,6 @@ function resetScreen() {
 
 
 function winTester() {
-
   if(isNaN(userGuess)){
     userMessage.innerText = 'Must input a valid number';
   }
@@ -81,17 +82,26 @@ function winTester() {
   else if(userGuess === winner) {
     rangeAdder();
     console.log('Minimum number: ' + min + ' Maximum number: ' + max) ;
+    console.log('current score is: ' + score)
+    totalScore = totalScore + score;
+    console.log('total score is: ' + totalScore)
+    score = 10;
   }
   else if(userGuess > winner) {
     userMessage.innerText = 'That guess is too high.' ;
+    score -= 1;
+    console.log('current score is: ' + score)
+
   }
   else{userMessage.innerText = 'That guess is too low' ;
+    score -=1;
+    console.log('current score is: ' + score)
 }
-
+  return totalScore;
 }
 
 function rangeAdder() {
-
+    
     min -= 10;
     max += 10;
     userMessage.innerText = ('GREAT JOB! Let\'s make it harder...\n The number to guess is now between ' + min + ' and ' + max) ;
@@ -99,8 +109,10 @@ function rangeAdder() {
     console.log('The new winning number is: ' + winner) ;
     minNumber.value = min ;
     maxNumber.value = max ;
+    
 
   }
+
 
 input.addEventListener('input', clearEnable) ;
 submitRange.addEventListener('click', rangeSet) ;
