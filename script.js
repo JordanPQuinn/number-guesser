@@ -69,6 +69,9 @@ function resetScreen() {
   winner = undefined ;
   clear.disabled = true ;
   reset.disabled = true ; 
+  totalScore = 0;
+  console.log('totalscore reset, now equal to: ' + totalScore)
+
 }
 
 
@@ -112,7 +115,6 @@ function rangeAdder() {
     
 
   }
-
 
 input.addEventListener('input', clearEnable) ;
 submitRange.addEventListener('click', rangeSet) ;
