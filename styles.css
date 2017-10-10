@@ -19,8 +19,6 @@ header{
 
 .score-bar{
   float: right;
-  right: 0px;
-  margin-top: 5px;
   border: 2px solid #E6E7E8;
   color: #ED458B;
   background-color: #404041;
@@ -30,11 +28,15 @@ header{
 
 
 .pink-head {
+  left: 5%;
+  position: relative;
   color: #ED458B;
   display: inline;
 }
 
 #grey-head {
+  left: 5%;
+  position: relative;
   color: #E6E7E8;
   display: inline;
 
