@@ -4,10 +4,12 @@
   <title>Number Guesser</title>
   <link rel = "stylesheet" href = "styles.css" >
   <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header> 
     <h1 class = "pink-head"> Number <h1 id ="grey-head"> Guesser </h1></h1>
+    <button class="score-bar"> Current Score </button>
   </header>
   <label for="minRange" id = "range"> Enter a minimum number: 
   <input type="text" placeholder="Enter minimum range" id="minRange">
@@ -24,7 +26,7 @@
   <input type= "submit" value = "Clear" id = "clearButton" class = "button">
   <p> Your last guess was: </p>
   <h1 id = "currentGuess"> 0 </h1> 
-  <h1 id = "userMessage"> </h1>
+  <h1 id = "userMessage"> Welcome!<br > Guessing correctly on the first try earns you 10 points.<br > Every guess after that costs you a point.<br > Try to get the highest score you can!</h1>
    <input type= "submit" value = "Reset" id = "resetButton" class = "button">
   <script src = "script.js" type="text/javascript"></script>
 </body>

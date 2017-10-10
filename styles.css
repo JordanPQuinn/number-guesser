@@ -17,6 +17,17 @@ header{
 
 }
 
+.score-bar{
+  float: right;
+  right: 0px;
+  margin-top: 5px;
+  border: 2px solid #E6E7E8;
+  color: #ED458B;
+  background-color: #404041;
+  width: 10%;
+
+}
+
 
 .pink-head {
   color: #ED458B;
