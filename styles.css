@@ -10,7 +10,6 @@
 
 header{
   background-color: #404041;
-  /*margin-bottom: 15px;*/
   padding: 6px;
   width: 100%;
   font-weight: 700;
@@ -21,8 +20,8 @@ header{
 #score-bar{
   display: table-cell;
   vertical-align: middle;
-  position: relative;
-  float: right;
+  float: left;
+  margin-left: 4.4%;
   border: 2px solid #E6E7E8;
   color: #ED458B;
   background-color: #404041;
@@ -40,14 +39,14 @@ header{
   height: 160px;
   width: 107px;
   display: inline;
-  position: relative;
   top: -10%;
-  left: 85%;
+  right: 50%;
 
 }
 
+
 #dropdown-content {
-    /*display: none;*/
+    display: none;
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -56,12 +55,14 @@ header{
 
 }
 
+
 #dropdown-content p{
   margin-top: 0px;
   color: black;
   padding-top: 10px;
   text-decoration: none;
   display: block;
+
 }
 
 #dropdown-content h4{
@@ -76,14 +77,14 @@ header{
 
 
 .pink-head {
-  left: 5%;
+  left: -7.2%;
   position: relative;
   color: #ED458B;
   display: inline;
 }
 
 #grey-head {
-  left: 5%;
+  left: -7.2%;
   position: relative;
   color: #E6E7E8;
   display: inline;

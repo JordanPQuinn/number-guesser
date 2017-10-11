@@ -88,6 +88,7 @@ function winTester() {
     console.log('Minimum number: ' + min + ' Maximum number: ' + max) ;
     console.log('current score is: ' + score)
     totalScore = totalScore + score;
+    document.getElementById('totalScoreCount').innerText = totalScore;
     userMessage.innerText = ('GREAT JOB! Total score is: ' + totalScore + '\nLet\'s make it harder...\n The number to guess is now between ' + min + ' and ' + max) ;
     winner = Math.floor(Math.random() * (max - min)) + min ;
     console.log('The new winning number is: ' + winner) ;
@@ -122,3 +123,7 @@ guess.addEventListener('click', guessGrabber) ;
 guess.addEventListener('click', winTester) ; 
 clear.addEventListener('click', clearInput) ;
 reset.addEventListener('click', resetScreen) ;
+scoreButton.addEventListener('click', function(){
+  document.getElementById('dropdown-content').setAttribute("style", "display:block");
+
+});
