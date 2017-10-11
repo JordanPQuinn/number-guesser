@@ -117,13 +117,19 @@ function rangeAdder() {
     
   }
 
+function displayToggle(){
+  var dropDownMenu = document.getElementById('dropdown-content');
+    if (dropDownMenu.style.display == "none") {
+        dropDownMenu.setAttribute("style", "display:block")
+    } else {
+        dropDownMenu.setAttribute("style", "display:none")
+    }
+}
+
 input.addEventListener('input', clearEnable) ;
 submitRange.addEventListener('click', rangeSet) ;
 guess.addEventListener('click', guessGrabber) ;
 guess.addEventListener('click', winTester) ; 
 clear.addEventListener('click', clearInput) ;
 reset.addEventListener('click', resetScreen) ;
-scoreButton.addEventListener('click', function(){
-  document.getElementById('dropdown-content').setAttribute("style", "display:block");
-
-});
+scoreButton.addEventListener('click', displayToggle);
