@@ -10,7 +10,7 @@
 
 header{
   background-color: #404041;
-  margin-bottom: 15px;
+  /*margin-bottom: 15px;*/
   padding: 6px;
   width: 100%;
   font-weight: 700;
@@ -47,7 +47,7 @@ header{
 }
 
 #dropdown-content {
-    display: none;
+    /*display: none;*/
     position: absolute;
     background-color: #f9f9f9;
     min-width: 160px;
@@ -57,21 +57,21 @@ header{
 }
 
 #dropdown-content p{
+  margin-top: 0px;
   color: black;
-  padding: 12px 16px;
+  padding-top: 10px;
   text-decoration: none;
   display: block;
 }
 
 #dropdown-content h4{
   color: black;
-  padding: 12px 16px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   text-decoration: none;
   display: block;
-}
-
-.score-text{
-  display: none;
+  color: #ED458B;
+  font-size: 2em;
 }
 
 
@@ -97,6 +97,11 @@ header{
 
 }
 
+#range-input{
+  margin-top: 15px;
+
+
+}
 #range {
   margin: 5px;
 
@@ -148,6 +153,7 @@ header{
 
 p {
   margin-top: 15px;
+
 }
 
 
