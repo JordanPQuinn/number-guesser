@@ -17,23 +17,29 @@
       <h4 id = "totalScoreCount" class="score-text"> 0 </h4>
     </section>
   </nav>
-  <label for="minRange" id = "range"> Enter a minimum number: 
-  <input type="text" placeholder="Enter minimum range" id="minRange">
-  </label>
-  <br>
-  <label for="maxRange" id = "range"> Enter a maximum number: 
-  <input type="text" placeholder="Enter maximum range" id="maxRange"></label>
-  <br>
-  <input type= "submit" value = "Submit range" id = "rangeButton" class = "button">
-  <br >
-  <input type ="text" placeholder = "Enter Your Number" id="userInput"> 
-  <br >
-  <input type= "submit" value = "Guess" id = "guessButton" class = "button">
-  <input type= "submit" value = "Clear" id = "clearButton" class = "button">
-  <p> Your last guess was: </p>
-  <h1 id = "currentGuess"> 0 </h1> 
-  <h1 id = "userMessage"> Welcome!<br > Guessing correctly on the first try earns you 10 points.<br > Every guess after that costs you a point.<br > Try to get the highest score you can!</h1>
-   <input type= "submit" value = "Reset" id = "resetButton" class = "button">
+  <section id="range-input">
+    <label for="minRange" id = "range"> Enter a minimum number: 
+    <input type="text" placeholder="Enter minimum range" id="minRange">
+    </label>
+    <br>
+    <label for="maxRange" id = "range"> Enter a maximum number: 
+    <input type="text" placeholder="Enter maximum range" id="maxRange"></label>
+    <br>
+    <input type= "submit" value = "Submit range" id = "rangeButton" class = "button">
+    <br >
+  </section>
+  <section id ="guess-submit-area">
+    <input type ="text" placeholder = "Enter Your Number" id="userInput"> 
+    <br >
+    <input type= "submit" value = "Guess" id = "guessButton" class = "button">
+    <input type= "submit" value = "Clear" id = "clearButton" class = "button">
+  </section>
+  <section id = "user-facing-info">
+    <p> Your last guess was: </p>
+    <h1 id = "currentGuess"> 0 </h1> 
+    <h1 id = "userMessage"> Welcome!<br > Guessing correctly on the first try earns you 10 points.<br > Every guess after that costs you a point.<br > Try to get the highest score you can!</h1>
+    <input type= "submit" value = "Reset" id = "resetButton" class = "button">
+  </section>
   <script src = "script.js" type="text/javascript"></script>
 </body>
 </html>
