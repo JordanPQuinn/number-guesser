@@ -14,16 +14,24 @@ header{
   padding: 6px;
   width: 100%;
   font-weight: 700;
+  display: table;
 
 }
 
-.score-bar{
+#score-bar{
+  display: table-cell;
+  vertical-align: middle;
   float: right;
   border: 2px solid #E6E7E8;
   color: #ED458B;
   background-color: #404041;
   width: 10%;
+  height: 40px;
 
+}
+
+#score-bar:hover{
+  cursor: pointer;
 }
 
 

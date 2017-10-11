@@ -2,15 +2,16 @@ var input = document.getElementById('userInput') ;
 var guess = document.getElementById('guessButton') ;
 var clear = document.getElementById('clearButton') ;
 var reset = document.getElementById('resetButton') ;
+var scoreButton = document.getElementById('score-bar')
 var currentGuess = document.getElementById('currentGuess') ;
-var winner ;
-var userGuess ;
-var min ;
-var max ;
 var userMessage = document.getElementById('userMessage') ;
 var minNumber = document.getElementById('minRange') ;
 var maxNumber = document.getElementById('maxRange') ; 
 var submitRange = document.getElementById('rangeButton') ;
+var winner ;
+var userGuess ;
+var min ;
+var max ;
 var score = 10;
 var totalScore = 0;
 
@@ -87,6 +88,9 @@ function winTester() {
     console.log('Minimum number: ' + min + ' Maximum number: ' + max) ;
     console.log('current score is: ' + score)
     totalScore = totalScore + score;
+    userMessage.innerText = ('GREAT JOB! Total score is: ' + totalScore + '\nLet\'s make it harder...\n The number to guess is now between ' + min + ' and ' + max) ;
+    winner = Math.floor(Math.random() * (max - min)) + min ;
+    console.log('The new winning number is: ' + winner) ;
     console.log('total score is: ' + totalScore)
     score = 10;
   }
@@ -107,13 +111,9 @@ function rangeAdder() {
     
     min -= 10;
     max += 10;
-    userMessage.innerText = ('GREAT JOB! Let\'s make it harder...\n The number to guess is now between ' + min + ' and ' + max) ;
-    winner = Math.floor(Math.random() * (max - min)) + min ;
-    console.log('The new winning number is: ' + winner) ;
-    minNumber.value = min ;
     maxNumber.value = max ;
+    minNumber.value = min ;
     
-
   }
 
 input.addEventListener('input', clearEnable) ;
