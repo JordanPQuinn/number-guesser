@@ -18,6 +18,8 @@ var totalScore = 0;
 clear.disabled = true ;
 reset.disabled = true ;
 
+document.onload = launch();
+
 function rangeSet() {
   
   min = Math.ceil(minNumber.value) ;
@@ -89,7 +91,7 @@ function winTester() {
     console.log('current score is: ' + score)
     totalScore = totalScore + score;
     document.getElementById('totalScoreCount').innerText = totalScore;
-    userMessage.innerText = ('GREAT JOB! Total score is: ' + totalScore + '\nLet\'s make it harder...\n The number to guess is now between ' + min + ' and ' + max) ;
+    userMessage.innerText = ('GREAT JOB! \nLet\'s make it harder...\n The number to guess is now between ' + min + ' and ' + max) ;
     winner = Math.floor(Math.random() * (max - min)) + min ;
     console.log('The new winning number is: ' + winner) ;
     console.log('total score is: ' + totalScore)
@@ -120,10 +122,27 @@ function rangeAdder() {
 function displayToggle(){
   var dropDownMenu = document.getElementById('dropdown-content');
     if (dropDownMenu.style.display == "none") {
-        dropDownMenu.setAttribute("style", "display:block")
+        dropDownMenu.setAttribute("style", "display:inline")
     } else {
         dropDownMenu.setAttribute("style", "display:none")
     }
+}
+
+function launch() {
+
+  var i = 0;
+  var maxCount = 101;
+  delay = 20;
+
+  var iID = setInterval(function() {
+    currentGuess.innerText = i;
+    if (++i >= maxCount){
+      clearInterval(iID);
+      currentGuess.innerText = '0';
+    } 
+    },
+   delay);
+
 }
 
 input.addEventListener('input', clearEnable) ;
